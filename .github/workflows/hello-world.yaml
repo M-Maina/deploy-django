@@ -2,6 +2,9 @@ name: Give a name
 
 on:
   workflow_call: #Allows you to call this workflow from another workflow
+    secrets:
+      DJANGO_SECRET_KEY:
+         required: true  #Allows secrets to move from this workflow to the other one
   workflow_dispatch: #Allows you to run the workflow manually
   # push:
   #   branches: [ main ]
