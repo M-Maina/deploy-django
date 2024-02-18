@@ -22,7 +22,7 @@ RUN /opt/venv/bin/pip install -r requirements.txt
 RUN /opt/venv/bin/pip install pip --upgrade && \
     /opt/venv/bin/pip install -r requirements.txt && \
     #/opt/venv/bin/pip install mysqlclient && \
-   # /opt/venv/bin/pip install mysqlclient && \
+   #/opt/venv/bin/pip install mysqlclient && \
     chmod +x config/entrypoint.sh
 
 # entrypoint.sh to run our gunicorn instance
