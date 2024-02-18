@@ -92,11 +92,11 @@ DATABASES = {
     }
 }
 
-DATABASE_BACKEND = os.environ.get("DATABASE_BACKEND")
-if DATABASE_BACKEND == "mysql":
-    from .dbs.mysql import *  # noqa
-elif DATABASE_BACKEND == "postgres":
-    from .dbs.postgres import *
+# DATABASE_BACKEND = os.environ.get("DATABASE_BACKEND")
+# if DATABASE_BACKEND == "mysql":
+#     from .dbs.mysql import *  # noqa
+# elif DATABASE_BACKEND == "postgres":
+#     from .dbs.postgres import *
 
 
 # Password validation

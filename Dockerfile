@@ -1,4 +1,4 @@
-FROM python:3.10.3-slim
+FROM python:3.10.4-slim
 
 # copy your local files to your
 # docker container
@@ -21,9 +21,10 @@ RUN /opt/venv/bin/pip install -r requirements.txt
 
 RUN /opt/venv/bin/pip install pip --upgrade && \
     /opt/venv/bin/pip install -r requirements.txt && \
-    /opt/venv/bin/pip install mysqlclient && \
-    # /opt/venv/bin/pip install mysqlclient && \
+    #/opt/venv/bin/pip install mysqlclient && \
+   # /opt/venv/bin/pip install mysqlclient && \
     chmod +x config/entrypoint.sh
 
 # entrypoint.sh to run our gunicorn instance
-CMD [ "/app/config/entrypoint.sh" ]
+#CMD [ "/app/config/entrypoint.sh" ]
+CMD /opt/venv/bin/gunicorn cfeblog.wsgi:application --bind "0.0.0.0:8000"
