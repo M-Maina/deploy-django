@@ -1,9 +1,10 @@
 name: Give a name
 
 on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
+  workflow_call: #Allows you to call this workflow from another workflow
+  workflow_dispatch: #Allows you to run the workflow manually
+  # push:
+  #   branches: [ main ]
     
 
 jobs:
