@@ -13,4 +13,5 @@ jobs:
         DJANGO_SECRET_KEY: "{{ secrets.DJANGO_SECRET_KEY }}" #Gets secrets from the other workflow
 
   build_django:
+     needs: test_django
      uses: ./.github/workflows/container.yaml
