@@ -14,9 +14,10 @@ WORKDIR /app
 # Django project runs with mysql
 # along with a few other deps
 RUN apt-get update && \
-    apt-get install -y \ 
+    apt-get install -y \
     locales \
     libmemcached-dev \ 
+    pkg-config \
     default-libmysqlclient-dev \ 
     libjpeg-dev \
     zlib1g-dev \
